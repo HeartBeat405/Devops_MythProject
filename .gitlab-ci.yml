@@ -1,0 +1,15 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo "Building application..."
+    - docker build -t myapp .
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying application to Kubernetes..."
+    - kubectl apply -f app-deployment.yaml
