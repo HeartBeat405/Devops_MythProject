@@ -18,4 +18,4 @@ jobs:
           version: 'v1.27.0'
 
       - name: Deploy to Kubernetes
-        run: kubectl apply -f nginx-deployment.yaml
+        run: kubectl apply -f deployment.yaml
